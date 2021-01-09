@@ -3,11 +3,11 @@ const heroIconData = {
     data: [
         {
             icon: 'facebook',
-            link: '#'
+            link: 'https://www.facebook.com/laimonas.mas'
         },
         {
-            icon: 'twitter',
-            link: '#'
+            icon: 'facebook',
+            link: 'https://www.facebook.com/jonusaite'
         },
         {
             icon: 'behance',

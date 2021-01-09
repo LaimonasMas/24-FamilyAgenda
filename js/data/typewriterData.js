@@ -1,3 +1,3 @@
-const typeWriterAllWords = ['photographer','web developer','ui/ux designer'];
+const typeWriterAllWords = ['Laimonas','Rūta','Lukas','Benas','Tauras'];
 
 export { typeWriterAllWords };
