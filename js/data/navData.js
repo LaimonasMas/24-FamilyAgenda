@@ -2,34 +2,29 @@ const navData = {
     selector: '#navigation',
     menu: [
         {
-            text: 'Home',
+            text: 'Pradžia',
             link: '#'
         },
         {
-            text: 'About',
+            text: 'Laimonas',
             link: '#about'
         },
         {
-            text: 'Services',
+            text: 'Rūta',
             link: '#services'
         },
         {
-            text: 'Portfolio',
+            text: 'Lukas',
             link: '#portfolio'
         },
         {
-            text: 'Client',
+            text: 'Benas',
             link: '#renderTestimonials'
         },
         {
-            text: 'Blog',
+            text: 'Tauras',
             link: '#blog'
         },
-        {
-            text: 'Contact',
-            link: '#contact'
-        }
-
     ]
 }
 
