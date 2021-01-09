@@ -1,0 +1,113 @@
+.container.hero {
+    background-image: url(../../img/header.jpg);
+    /* text-align: center; */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    min-height: 100vh;
+}
+    .container.hero::before {
+        content: "";
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .container.hero > .row {
+        z-index: 1;
+    }  
+    .container.hero > .row > .col-12 {
+        text-align: center;
+        margin-top: 80px;
+    }
+    .hero h3 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 23px;
+        line-height: 29px;
+        font-weight: 500;
+        color: #bdbdbd;
+    }
+        .hero > .row h1 {
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 60px;
+            font-weight: 490;
+            text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+        .hero .row > .typer {
+            display: inline-block;
+            margin-bottom: 16px;
+            letter-spacing: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            line-height: 26px;
+            min-height: 28px;
+            color: #bdbdbd;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            position: relative;
+        }
+            .hero > .row .typer::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                width: 1px;
+                height: 20px;
+                background: var(--main-color);
+                animation: blinker 0.5s infinite;
+            }
+
+        .social-icon {
+            width: 100%;
+        }
+            .hero .row .fa {
+                text-decoration: none;
+                cursor: pointer;
+                display: inline-block;
+                color: white;
+                margin: 5px;
+                padding: 10px;
+                line-height: 20px;
+                width: 40px;
+                transition: all 0.4s;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+                .hero .row .fa:hover {
+                    background-color: var(--main-color);
+                }
+
+@keyframes blinker {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero > .row > .row > span {
+        font-size: 16px;
+    }
+    .hero > .row > .row > h1 {
+        font-size: 32px;
+    }
+    .hero .row > .row ul > li {
+        font-size: 10px;
+    }
+    .hero .row .fa {
+        margin: 2px;
+    }
+
+}
