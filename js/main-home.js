@@ -31,7 +31,7 @@ import { Testimonials } from "./components/testimonials/Testimonials.js";
 import { testimonialData } from "./data/testimonialsData.js";
 /* blog */
 /* contact */
-import { contactsValidator } from "./components/contacts/contactsValidator.js";
+
 /* footer */
 
 /***************
@@ -66,6 +66,6 @@ new Testimonials ({
 });
 /* blog */
 /* contact */
-contactsValidator('form');
+
 /* footer */
 document.getElementById("year").innerHTML = new Date().getFullYear();
