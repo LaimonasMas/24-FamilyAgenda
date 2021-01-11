@@ -19,7 +19,6 @@
     }
     .container.hero > .row {
         z-index: 1;
-        margin-top: 250px;
     }  
     .container.hero > .row > .col-12 {
         text-align: center;
@@ -97,6 +96,9 @@
 }
 
 @media (max-width: 760px) {
+    .container.hero > .row {
+        margin-top: 200px;
+    } 
     .hero > .row > .row > span {
         font-size: 16px;
     }
