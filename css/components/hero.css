@@ -22,14 +22,13 @@
     }  
     .container.hero > .row > .col-12 {
         text-align: center;
-        margin-top: 80px;
     }
     .hero h3 {
         width: 100%;
         display: block;
         margin-bottom: 20px;
         font-family: 'Raleway', sans-serif;
-        font-size: 23px;
+        font-size: 30px;
         line-height: 29px;
         font-weight: 500;
         color: #bdbdbd;

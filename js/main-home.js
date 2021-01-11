@@ -4,6 +4,8 @@ ALL IMPORTS
 /* navigation bar */
 import { navData } from './data/navData.js';
 import { RenderNav } from './components/navigation/RenderNav.js';
+/* main clock */
+import { renderMainClock } from "./components/mainClock/renderMainClock.js";
 /* hero */
 import { heroIconData } from './data/heroIconData.js';
 import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
@@ -40,6 +42,10 @@ EXECUTION
 /* navigation bar */
 new RenderNav(navData);
 /* hero */
+/* main clock */
+
+renderMainClock('.main-clock');
+
 // hero-icon-render
 renderHeroIcons('#hero-icons_block', heroIconData);
 //typewriter
