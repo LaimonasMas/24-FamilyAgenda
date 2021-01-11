@@ -19,6 +19,7 @@
     }
     .container.hero > .row {
         z-index: 1;
+        margin-top: 250px;
     }  
     .container.hero > .row > .col-12 {
         text-align: center;
@@ -68,7 +69,6 @@
 
         .social-icon {
             width: 100%;
-            padding-top: 170px;
         }
             .hero .row .fa {
                 text-decoration: none;
