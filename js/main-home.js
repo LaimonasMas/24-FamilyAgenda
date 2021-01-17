@@ -12,6 +12,7 @@ import { renderHeroIcons } from './components/heroIcons/renderHeroIcons.js';
 import { typeWriterAllWords } from "./data/typewriterData.js"
 import { RenderTypeWriter } from "./components/renderTypewriter/RenderTypewriter.js"
 /* about me */
+import { laimonoData } from "./data/laimonoData.js";
 /* skills */
 import { skillsData } from "./data/skillsData.js";
 import { renderMySkills } from "./components/mySkills/renderMySkills.js";
@@ -63,6 +64,7 @@ renderClientCounter('#clientCounterBlock', clientCounterData);
 counterAnimationOnScroll();
 /* services */
 renderMyServices('#services-block', servicesData);
+renderMyServices('#services-block1', laimonoData);
 /* portfolio */
 new Portfolio('.portfolio', portfolioData);
 /* testimonials */

@@ -15,10 +15,4 @@ function renderMainClock(selector) {
     setTimeout(renderMainClock, 1000);
 }
 
-
-
-
-    
-
-
 export { renderMainClock }

@@ -7,7 +7,7 @@ const navData = {
         },
         {
             text: 'Laimonas',
-            link: '#about'
+            link: '#laimonas'
         },
         {
             text: 'Rūta',
