@@ -13,6 +13,7 @@ import { typeWriterAllWords } from "./data/typewriterData.js"
 import { RenderTypeWriter } from "./components/renderTypewriter/RenderTypewriter.js"
 /* about me */
 import { laimonoData } from "./data/laimonoData.js";
+import { renderLaimonas } from "./components/laimonas/renderLaimonas.js";
 /* skills */
 import { skillsData } from "./data/skillsData.js";
 import { renderMySkills } from "./components/mySkills/renderMySkills.js";
@@ -24,7 +25,7 @@ import { clientCounterData } from './data/clientCounterData.js';
 import { renderClientCounter } from './components/clientCounter/renderClientCounter.js';
 import { counterAnimationOnScroll } from './components/clientCounter/counterAnimationOnScroll.js';
 /* services */
-import { servicesData } from "./data/servicesData.js";
+// import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
 import { portfolioData } from "./data/portfolioData.js";
@@ -63,8 +64,8 @@ renderResume('#resumeRight', resumeData);
 renderClientCounter('#clientCounterBlock', clientCounterData);
 counterAnimationOnScroll();
 /* services */
-renderMyServices('#services-block', servicesData);
-renderMyServices('#services-block1', laimonoData);
+// renderMyServices('#services-block', servicesData);
+renderLaimonas('#services-block1', laimonoData);
 /* portfolio */
 new Portfolio('.portfolio', portfolioData);
 /* testimonials */
