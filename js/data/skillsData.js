@@ -1,9 +1,21 @@
+function pBar() {
+    let timeGeneral = new Date();
+    let minutes = timeGeneral.getMinutes();
+    let pamokosLaikas = minutes + 5;
+    setTimeout(pBar, 1000);
+    return pamokosLaikas;
+}
+
+let timePBar = pBar();
+console.log(timePBar);
+
+
 const skillsData = {
     maxLimit: 8,
     data: [
         {    
             label: 'Photography',
-            value: '75'
+            value: `${timePBar}`
         },
         {
             label: 'Branding',

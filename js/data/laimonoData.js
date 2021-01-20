@@ -1,4 +1,3 @@
-
 let timeGeneral = new Date();
 const weekday = timeGeneral.getDay();
 const month = timeGeneral.getMonth();
@@ -106,4 +105,4 @@ const laimonoData = {
 }
 
 
-export { laimonoData };
+export { laimonoData, timeGeneral };

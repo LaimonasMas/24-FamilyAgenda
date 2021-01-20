@@ -1,9 +1,10 @@
 function renderMainClock(selector) {
     const clockDOM = document.querySelector('.main-clock');
     let timeGeneral = new Date();
-    let hours = timeGeneral.getHours();
+    let hours = timeGeneral.getHours();    
     let minutes = timeGeneral.getMinutes();
     let seconds = timeGeneral.getSeconds();
+
         if (!clockDOM) {
         return false;
         };
@@ -14,5 +15,4 @@ function renderMainClock(selector) {
     clockDOM.innerText = HTML;
     setTimeout(renderMainClock, 1000);
 }
-
 export { renderMainClock }
