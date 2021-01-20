@@ -9,9 +9,9 @@ import { laimonoData } from "../../data/laimonoData.js";
  * @returns {*}
  */
 function renderLaimonas(selector, data) {
-    // if (!isValidInput(selector, data)) {
-    //     return false;
-    // }
+    if (!isValidInput(selector, data)) {
+        return false;
+    }
 
     const DOM = document.querySelector(selector);
     if (!DOM) {
