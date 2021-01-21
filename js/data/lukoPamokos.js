@@ -1,45 +1,45 @@
 const lukoTvarkarastis = {
-    pirmadienis: {
-        pirma: 'Lietuvių k.',
-        antra: 'Tikyba',
-        trecia: 'Matematika',
-        ketvirta: 'Anglų',
-        penkta: 'Fizinis',
-        sesta: 'Lietuvių',
-        septinta: 'IMV'
-    },
-    antradienis: {
-        pirma: 'Lietuvių k.',
-        antra: 'Muzika',
-        trecia: 'Pasaulio pažinimas',
-        ketvirta: 'Lietuvių',
-        penkta: 'Matematika',
-        sesta: 'IMV'
-    },
-    treciadienis: {
-        pirma: 'Lietuvių k.',
-        antra: 'Anglų k.',
-        trecia: 'Lietuvių k.',
-        ketvirta: 'Matematika',
-        penkta: 'Fizinis',
-        sesta: 'IMV',
-        septinta: 'IMV'
-    },
-    ketvirtadienis: {
-        pirma: 'Muzika',
-        antra: 'Lietuvių k.',
-        trecia: 'Pasaulio pažinimas',
-        ketvirta: 'Matematika',
-        penkta: 'Informatika',
-        sesta: 'IMV'
-    },
-    penktadienis: {
-        pirma: 'Klasės valandėlė',
-        antra: 'Šokis',
-        trecia: 'Dailė',
-        ketvirta: 'Dailė',
-        penkta: 'Matematika'
-    }
+    pirmadienis: [
+        '1. Lietuvių k.',
+        '2. Tikyba',
+        '3. Matematika',
+        '4. Anglų',
+        '5. Fizinis',
+        '6. Lietuvių',
+        '7. IMV'
+    ],
+    antradienis: [
+        '1. Lietuvių k.',
+        '2. Muzika',
+        '3. Pasaulio pažinimas',
+        '4. Lietuvių',
+        '5. Matematika',
+        '6. IMV'
+    ],
+    treciadienis: [
+        '1. Lietuvių k.',
+        '2. Anglų k.',
+        '3. Lietuvių k.',
+        '4. Matematika',
+        '5. Fizinis',
+        '6. IMV',
+        '7. IMV'
+    ],
+    ketvirtadienis: [
+        '1. Muzika', 
+        '2. Lietuvių k.', 
+        '3. Pasaulio pažinimas', 
+        '4, Matematika', 
+        '5. Informatika', 
+        '6. IMV'
+    ],
+    penktadienis: [
+        '1. Klasės valandėlė',
+        '2. Šokis',
+        '3. Dailė',
+        '4. Dailė',
+        '5. Matematika'
+    ]
 };
 
 export { lukoTvarkarastis };

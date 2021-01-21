@@ -1,4 +1,5 @@
-import { pirmosPamPav, antrosPamPav, treciosPamPav,ketvirtosPamPav, penktosPamPav, sestosPamPav, septintosPamPav } from ".././components/lukas/renderPamokosIntoData.js";
+import { pirmosPamPav, antrosPamPav, treciosPamPav,ketvirtosPamPav, penktosPamPav, sestosPamPav, septintosPamPav, astuntosPamPav, weekday } from ".././components/lukas/renderPamokosIntoData.js";
+import { maxPamokuSk } from "../components/lukas/renderMaxLimit.js";
 
 let timeGeneral = new Date();
 let hours = timeGeneral.getHours();
@@ -8,6 +9,9 @@ let arPrasidejoPirma = '';
 function pirma(h, min) {
     let pirmosLaikas = 0;
     arPrasidejoPirma = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoPirma = ' (Laukiam pirmadienio)';
+    }
     if ((h === 8) && (min >= 0 && min <= 44)){
         pirmosLaikas = min;
         arPrasidejoPirma = ' (Vyksta)';
@@ -25,6 +29,9 @@ let arPrasidejoAntra = '';
 function antra(h, min) {
     let antrosLaikas = 0;
     arPrasidejoAntra = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoAntra = ' (Laukiam pirmadienio)';
+    }
     if ((h === 8) && (min >= 55 && min <= 59)) {
         antrosLaikas = min - 55;
         arPrasidejoAntra = ' (Vyksta)';
@@ -46,6 +53,9 @@ let arPrasidejoTrecia = '';
 function trecia(h, min) {
     let treciosLaikas = 0;
     arPrasidejoTrecia = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoTrecia = ' (Laukiam pirmadienio)';
+    }
     if ((h === 9) && (min >= 55 && min <= 59)) {
         treciosLaikas = min - 55;
         arPrasidejoTrecia = ' (Vyksta)';
@@ -67,6 +77,9 @@ let arPrasidejoKetvirta = '';
 function ketvirta(h, min) {
     let ketvirtosLaikas = 0;
     arPrasidejoKetvirta = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoKetvirta = ' (Laukiam pirmadienio)';
+    }
     if ((h === 10) && (min >= 50 && min <= 59)) {
         ketvirtosLaikas = min - 50;
         arPrasidejoKetvirta = ' (Vyksta)';
@@ -88,6 +101,9 @@ let arPrasidejoPenkta = '';
 function penkta(h, min) {
     let penktosLaikas = 0;
     arPrasidejoPenkta = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoPenkta = ' (Laukiam pirmadienio)';
+    }
     if ((h === 11) && (min >= 55 && min <= 59)) {
         penktosLaikas = min - 55;
         arPrasidejoPenkta = ' (Vyksta)';
@@ -109,6 +125,9 @@ let arPrasidejoSesta = '';
 function sesta(h, min) {
     let sestosLaikas = 0;
     arPrasidejoSesta = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoSesta = ' (Laukiam pirmadienio)';
+    }
     if ((h === 13) && (min >= 0 && min <= 44)) {
         sestosLaikas = min;
         arPrasidejoSesta = ' (Vyksta)';
@@ -126,6 +145,9 @@ let arPrasidejoSeptinta = '';
 function septinta(h, min) {
     let septintosLaikas = 0;
     arPrasidejoSeptinta = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoSeptinta = ' (Laukiam pirmadienio)';
+    }
     if ((h === 13) && (min >= 55 && min <= 59)) {
         septintosLaikas = min - 55;
         arPrasidejoSeptinta = ' (Vyksta)';
@@ -143,8 +165,32 @@ function septinta(h, min) {
 }
 let septintaPamoka = septinta(hours, minutes);
 
+let arPrasidejoAstunta = '';
+function astunta(h, min) {
+    let astuntosLaikas = 0;
+    arPrasidejoAstunta = ' (Dar neprasidėjo)';
+    if(weekday === 0 || weekday === 6) {
+        arPrasidejoAstunta = ' (Laukiam pirmadienio)';
+    }
+    if ((h === 14) && (min >= 50 && min <= 59)) {
+        astuntosLaikas = min - 55;
+        arPrasidejoAstunta = ' (Vyksta)';
+    }
+    if ((h === 15) && (min >= 0 && min <= 34)){
+        astuntosLaikas = min + 5;
+        arPrasidejoAstunta = ' (Vyksta)';
+    }
+    if (((h >= 15 && min >= 35) && (h <= 23)) || (h >= 16 && h <= 23)) {
+        astuntosLaikas = 45;
+        arPrasidejoAstunta = ' (Jau baigėsi)';
+    } 
+    setTimeout(astunta, 1000);
+    return astuntosLaikas;
+}
+let astuntaPamoka = astunta(hours, minutes);
+
 const skillsData = {
-    maxLimit: 7,
+    maxLimit: `${maxPamokuSk}`,
     data: [
         {    
             label: `${pirmosPamPav} ${arPrasidejoPirma}`,
@@ -175,8 +221,8 @@ const skillsData = {
             value: `${septintaPamoka}` 
         },
         {
-            label: 'Photoshop',
-            value: '45' 
+            label: `${astuntosPamPav} ${arPrasidejoAstunta}`,
+            value: `${astuntaPamoka}` 
         },
     ]
 }
