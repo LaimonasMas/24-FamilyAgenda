@@ -2,7 +2,6 @@ let timeGeneral = new Date();
 let hours = timeGeneral.getHours();
 let minutes = timeGeneral.getMinutes();
 
-
 function pirma(h, min) {
     let pirmosLaikas = 0;
     if ((h === 8) && (min >= 0 && min <= 44)){
@@ -26,30 +25,62 @@ function antra(h, min) {
     }
     if (((h >= 9 && min >= 40) && (h <= 23)) || (h >= 10 && h <= 23)) {
         antrosLaikas = 45;
-    }
+    } 
     setTimeout(antra, 1000);
     return antrosLaikas;
 }
 let antraPamoka = antra(hours, minutes);
 
+function trecia(h, min) {
+    let treciosLaikas = 0;
+    if ((h === 9) && (min >= 55 && min <= 59)) {
+        treciosLaikas = min - 55;
+    }
+    if ((h === 10) && (min >= 0 && min <= 39)){
+        treciosLaikas = min + 5;
+    }
+    if (((h >= 10 && min >= 40) && (h <= 23)) || (h >= 11 && h <= 23)) {
+        treciosLaikas = 45;
+    } 
+    setTimeout(trecia, 1000);
+    return treciosLaikas;
+}
+let treciaPamoka = trecia(hours, minutes);
+
+function ketvirta(h, min) {
+    let ketvirtosLaikas = 0;
+    if ((h === 10) && (min >= 50 && min <= 59)) {
+        ketvirtosLaikas = min - 50;
+    }
+    if ((h === 11) && (min >= 0 && min <= 34)){
+        ketvirtosLaikas = min + 10;
+    }
+    if (((h >= 11 && min >= 35) && (h <= 23)) || (h >= 12 && h <= 23)) {
+        ketvirtosLaikas = 45;
+    } 
+    setTimeout(ketvirta, 1000);
+    return ketvirtosLaikas;
+}
+let ketvirtaPamoka = ketvirta(hours, minutes);
+
 const skillsData = {
     maxLimit: 8,
     data: [
         {    
-            label: 'Photography',
+            label: 'Pirma Pamoka',
             value: `${pirmaPamoka}`
         },
         {
-            label: 'Branding',
+            label: 'Antra pamoka',
             value: `${antraPamoka}`
         },
         {
-            label: 'Graphic design',
-            value: '70'
+            label: 'Trečia pamoka',
+            value: `${treciaPamoka}`
         },
         {
-            label: 'Development',
-            value: '80'
+            label: 'Ketvirta pamoka',
+            value: `${ketvirtaPamoka}`
         },
         {
             label: 'Html/Css',

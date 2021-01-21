@@ -30,9 +30,9 @@ function renderMySkills(selector, skillsData) {
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
-            <div style="width:${skills.value * 0.99}%" class="pbar bottom">
+            <div style="width:${skills.value * 2.22}%" class="pbar bottom">
                 <div class="pbar loading">
-                <div class="bar-value">${skills.value}%</div>
+                <div class="bar-value">${skills.value}min</div>
                 </div>
             </div>    
             </div>
