@@ -41,5 +41,5 @@ const lukoTvarkarastis = {
         penkta: 'Matematika'
     }
 };
-console.log(lukoTvarkarastis.penktadienis.length);
+
 export { lukoTvarkarastis };
