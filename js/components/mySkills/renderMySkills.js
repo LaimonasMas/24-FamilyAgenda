@@ -20,7 +20,7 @@ function renderMySkills(selector, skillsData) {
     const countStartL = 0;
     const countEndL = Math.ceil(skillsData.data.length / 2);
     const countStartR = countEndL;
-    const countEndR = skillsData.data.length;
+    const countEndR = skillsData.data.length || skillsData.maxLimit;
     if ( selector === '#skillsLeft' ) {
         for (let i = countStartL; i < countEndL; i++) {
             const skills = skillsData.data[i];
@@ -48,9 +48,9 @@ function renderMySkills(selector, skillsData) {
             HTML += `<div class="progress-bar">
             <div class="label">${skills.label}</div>
             <div class="pbar">
-            <div style="width:${skills.value * 0.99}%" class="pbar bottom">
+            <div style="width:${skills.value * 2.22}%" class="pbar bottom">
                 <div class="pbar loading">
-                <div class="bar-value">${skills.value}%</div>
+                <div class="bar-value">${skills.value}min</div>
                 </div>
             </div>    
             </div>
