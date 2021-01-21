@@ -15,7 +15,7 @@ function renderMySkills(selector, skillsData) {
     if (!DOM) {
         return false;
     }
-
+    
     let HTML = '';
     const countStartL = 0;
     const countEndL = Math.ceil(skillsData.data.length / 2);
