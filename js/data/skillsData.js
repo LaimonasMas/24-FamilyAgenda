@@ -103,6 +103,23 @@ function penkta(h, min) {
 }
 let penktaPamoka = penkta(hours, minutes);
 
+let arPrasidejoSesta = '';
+function sesta(h, min) {
+    let sestosLaikas = 0;
+    arPrasidejoSesta = ' (Dar neprasidėjo)';
+    if ((h === 13) && (min >= 0 && min <= 44)) {
+        sestosLaikas = min;
+        arPrasidejoSesta = ' (Vyksta)';
+    }
+    if (((h >= 13 && min >= 40) && (h <= 23)) || (h >= 14 && h <= 23)) {
+        sestosLaikas = 45;
+        arPrasidejoSesta = ' (Jau baigėsi)';
+    } 
+    setTimeout(sesta, 1000);
+    return sestosLaikas;
+}
+let sestaPamoka = sesta(hours, minutes);
+
 const skillsData = {
     maxLimit: 8,
     data: [
@@ -127,8 +144,8 @@ const skillsData = {
             value: `${penktaPamoka}` 
         },
         {
-            label: 'Js/Jquery',
-            value: '45' 
+            label: `Šešta pamoka ${arPrasidejoSesta}`,
+            value: `${sestaPamoka}` 
         },
         {
             label: 'Php/Wordpress',
