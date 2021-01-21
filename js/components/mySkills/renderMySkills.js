@@ -20,7 +20,13 @@ function renderMySkills(selector, skillsData) {
     const countStartL = 0;
     const countEndL = Math.ceil(skillsData.data.length / 2);
     const countStartR = countEndL;
-    const countEndR = skillsData.data.length || skillsData.maxLimit;
+    let countEndR = 0;
+    if (skillsData.maxLimit < skillsData.data.length) {
+        countEndR = skillsData.maxLimit;
+    } else {
+        countEndR = skillsData.data.length;
+    }
+ 
     if ( selector === '#skillsLeft' ) {
         for (let i = countStartL; i < countEndL; i++) {
             const skills = skillsData.data[i];

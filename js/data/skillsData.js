@@ -1,3 +1,5 @@
+import { pirmosPamPav, antrosPamPav, treciosPamPav,ketvirtosPamPav, penktosPamPav, sestosPamPav, septintosPamPav } from ".././components/lukas/renderPamokosIntoData.js";
+
 let timeGeneral = new Date();
 let hours = timeGeneral.getHours();
 let minutes = timeGeneral.getMinutes();
@@ -120,36 +122,57 @@ function sesta(h, min) {
 }
 let sestaPamoka = sesta(hours, minutes);
 
+let arPrasidejoSeptinta = '';
+function septinta(h, min) {
+    let septintosLaikas = 0;
+    arPrasidejoSeptinta = ' (Dar neprasidėjo)';
+    if ((h === 13) && (min >= 55 && min <= 59)) {
+        septintosLaikas = min - 55;
+        arPrasidejoSeptinta = ' (Vyksta)';
+    }
+    if ((h === 14) && (min >= 0 && min <= 39)){
+        septintosLaikas = min + 5;
+        arPrasidejoSeptinta = ' (Vyksta)';
+    }
+    if (((h >= 14 && min >= 40) && (h <= 23)) || (h >= 15 && h <= 23)) {
+        septintosLaikas = 45;
+        arPrasidejoSeptinta = ' (Jau baigėsi)';
+    } 
+    setTimeout(septinta, 1000);
+    return septintosLaikas;
+}
+let septintaPamoka = septinta(hours, minutes);
+
 const skillsData = {
-    maxLimit: 8,
+    maxLimit: 7,
     data: [
         {    
-            label: `Pirma pamoka ${arPrasidejoPirma}`,
+            label: `${pirmosPamPav} ${arPrasidejoPirma}`,
             value: `${pirmaPamoka}`
         },
         {
-            label: `Antra pamoka ${arPrasidejoAntra}`,
+            label: `${antrosPamPav} ${arPrasidejoAntra}`,
             value: `${antraPamoka}`
         },
         {
-            label: `Trečia pamoka ${arPrasidejoTrecia}`,
+            label: `${treciosPamPav} ${arPrasidejoTrecia}`,
             value: `${treciaPamoka}`
         },
         {
-            label: `Ketvirta pamoka ${arPrasidejoKetvirta}`,
+            label: `${ketvirtosPamPav} ${arPrasidejoKetvirta}`,
             value: `${ketvirtaPamoka}`
         },
         {
-            label: `Penkta pamoka ${arPrasidejoPenkta}`,
+            label: `${penktosPamPav} ${arPrasidejoPenkta}`,
             value: `${penktaPamoka}` 
         },
         {
-            label: `Šešta pamoka ${arPrasidejoSesta}`,
+            label: `${sestosPamPav} ${arPrasidejoSesta}`,
             value: `${sestaPamoka}` 
         },
         {
-            label: 'Php/Wordpress',
-            value: '45' 
+            label: `${septintosPamPav} ${arPrasidejoSeptinta}`,
+            value: `${septintaPamoka}` 
         },
         {
             label: 'Photoshop',
