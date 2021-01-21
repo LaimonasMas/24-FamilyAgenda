@@ -7,7 +7,9 @@
 
 You can access the website: [![c](https://img.shields.io/badge/HERE-9C27B0)](https://laimonasmas.github.io/24-FamilyAgenda/)
 
-Design inspiration: 
+Design inspiration: [![c](https://img.shields.io/badge/HERE-9C27B0)](https://front-end-by-rimantas.github.io/19-grupe-portfolio-new-per/)
+
+Inspiration of Design inspiration: [![c](https://img.shields.io/badge/HERE-9C27B0)](https://new-per.netlify.app/demo-3.html)
 
 <br>
 
