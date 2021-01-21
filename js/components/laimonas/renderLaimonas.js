@@ -1,5 +1,5 @@
 // import { areServicesValid } from "./areServicesValid.js";
-import { isValidInput } from "./isValidInput.js";
+
 import { laimonoData } from "../../data/laimonoData.js";
 
 /**
@@ -9,9 +9,7 @@ import { laimonoData } from "../../data/laimonoData.js";
  * @returns {*}
  */
 function renderLaimonas(selector, data) {
-    if (!isValidInput(selector, data)) {
-        return false;
-    }
+
 
     const DOM = document.querySelector(selector);
     if (!DOM) {
