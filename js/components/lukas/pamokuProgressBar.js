@@ -3,32 +3,18 @@ import { weekday } from "./renderPamokosIntoData.js";
 let timeGeneral = new Date();
 let hours = timeGeneral.getHours();
 let minutes = timeGeneral.getMinutes();
-// ---------------------------
-let secondsTest = 0;
-function incrementSeconds() {
-    secondsTest += 1;
-    if (secondsTest >= 45) {
-        secondsTest = 0;
-    }
-    const randomDOM = document.querySelector('.pbar.bottom');
-console.log(randomDOM.style.width);
 
-    console.log(secondsTest);
-}
-setInterval(incrementSeconds, 1000);
-// -----------------------------
 let arPrasidejoPirma = '';
 function pirma(h, min) {
     let pirmosLaikas = 0;
     arPrasidejoPirma = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoPirma = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 8) && (min >= 0 && min <= 44)){
+    } else if ((h === 15) && (min >= 0 && min <= 59)){
         pirmosLaikas = min;
+        // pirmosLaikasDOM.style.width = min+"%";
         arPrasidejoPirma = ' (Vyksta)';
-    }
-    if (((h >= 8 && min >= 45) && (h <= 23)) || (h >= 9 && h <= 23)) {
+    } else if (((h >= 8 && min >= 45) && (h <= 23)) || (h >= 9 && h <= 23)) {
         pirmosLaikas = 45;
         arPrasidejoPirma = ' (Jau baigėsi)';
     }
@@ -43,16 +29,13 @@ function antra(h, min) {
     arPrasidejoAntra = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoAntra = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 8) && (min >= 55 && min <= 59)) {
+    } else if ((h === 8) && (min >= 55 && min <= 59)) {
         antrosLaikas = min - 55;
         arPrasidejoAntra = ' (Vyksta)';
-    }
-    if ((h === 9) && (min >= 0 && min <= 39)){
+    } else if ((h === 9) && (min >= 0 && min <= 39)){
         antrosLaikas = min + 5;
         arPrasidejoAntra = ' (Vyksta)';
-    }
-    if (((h >= 9 && min >= 40) && (h <= 23)) || (h >= 10 && h <= 23)) {
+    } else if (((h >= 9 && min >= 40) && (h <= 23)) || (h >= 10 && h <= 23)) {
         antrosLaikas = 45;
         arPrasidejoAntra = ' (Jau baigėsi)';
     } 
@@ -67,16 +50,13 @@ function trecia(h, min) {
     arPrasidejoTrecia = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoTrecia = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 9) && (min >= 55 && min <= 59)) {
+    } else if ((h === 9) && (min >= 55 && min <= 59)) {
         treciosLaikas = min - 55;
         arPrasidejoTrecia = ' (Vyksta)';
-    }
-    if ((h === 10) && (min >= 0 && min <= 39)){
+    } else if ((h === 10) && (min >= 0 && min <= 39)){
         treciosLaikas = min + 5;
         arPrasidejoTrecia = ' (Vyksta)';
-    }
-    if (((h >= 10 && min >= 40) && (h <= 23)) || (h >= 11 && h <= 23)) {
+    } else if (((h >= 10 && min >= 40) && (h <= 23)) || (h >= 11 && h <= 23)) {
         treciosLaikas = 45;
         arPrasidejoTrecia = ' (Jau baigėsi)';
     } 
@@ -91,16 +71,13 @@ function ketvirta(h, min) {
     arPrasidejoKetvirta = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoKetvirta = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 10) && (min >= 50 && min <= 59)) {
+    } else if ((h === 10) && (min >= 50 && min <= 59)) {
         ketvirtosLaikas = min - 50;
         arPrasidejoKetvirta = ' (Vyksta)';
-    }
-    if ((h === 11) && (min >= 0 && min <= 34)){
+    } else if ((h === 11) && (min >= 0 && min <= 34)){
         ketvirtosLaikas = min + 10;
         arPrasidejoKetvirta = ' (Vyksta)';
-    }
-    if (((h >= 11 && min >= 35) && (h <= 23)) || (h >= 12 && h <= 23)) {
+    } else if (((h >= 11 && min >= 35) && (h <= 23)) || (h >= 12 && h <= 23)) {
         ketvirtosLaikas = 45;
         arPrasidejoKetvirta = ' (Jau baigėsi)';
     } 
@@ -115,16 +92,13 @@ function penkta(h, min) {
     arPrasidejoPenkta = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoPenkta = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 11) && (min >= 55 && min <= 59)) {
+    } else if ((h === 11) && (min >= 55 && min <= 59)) {
         penktosLaikas = min - 55;
         arPrasidejoPenkta = ' (Vyksta)';
-    }
-    if ((h === 12) && (min >= 0 && min <= 39)) {
+    } else if ((h === 12) && (min >= 0 && min <= 39)) {
         penktosLaikas = min + 5;
         arPrasidejoPenkta = ' (Vyksta)';
-    }
-    if (((h >= 12 && min >= 40) && (h <= 23)) || (h >= 13 && h <= 23)) {
+    } else if (((h >= 12 && min >= 40) && (h <= 23)) || (h >= 13 && h <= 23)) {
         penktosLaikas = 45;
         arPrasidejoPenkta = ' (Jau baigėsi)';
     } 
@@ -139,12 +113,10 @@ function sesta(h, min) {
     arPrasidejoSesta = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoSesta = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 13) && (min >= 0 && min <= 44)) {
+    } else if ((h === 13) && (min >= 0 && min <= 44)) {
         sestosLaikas = min;
         arPrasidejoSesta = ' (Vyksta)';
-    }
-    if (((h >= 13 && min >= 40) && (h <= 23)) || (h >= 14 && h <= 23)) {
+    } else if (((h >= 13 && min >= 40) && (h <= 23)) || (h >= 14 && h <= 23)) {
         sestosLaikas = 45;
         arPrasidejoSesta = ' (Jau baigėsi)';
     } 
@@ -159,16 +131,13 @@ function septinta(h, min) {
     arPrasidejoSeptinta = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoSeptinta = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 13) && (min >= 55 && min <= 59)) {
+    } else if ((h === 13) && (min >= 55 && min <= 59)) {
         septintosLaikas = min - 55;
         arPrasidejoSeptinta = ' (Vyksta)';
-    }
-    if ((h === 14) && (min >= 0 && min <= 39)){
+    } else if ((h === 14) && (min >= 0 && min <= 39)){
         septintosLaikas = min + 5;
         arPrasidejoSeptinta = ' (Vyksta)';
-    }
-    if (((h >= 14 && min >= 40) && (h <= 23)) || (h >= 15 && h <= 23)) {
+    } else if (((h >= 14 && min >= 40) && (h <= 23)) || (h >= 15 && h <= 23)) {
         septintosLaikas = 45;
         arPrasidejoSeptinta = ' (Jau baigėsi)';
     } 
@@ -183,16 +152,13 @@ function astunta(h, min) {
     arPrasidejoAstunta = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoAstunta = ' (Laukiam pirmadienio)';
-    }
-    if ((h === 14) && (min >= 50 && min <= 59)) {
+    } else if ((h === 14) && (min >= 50 && min <= 59)) {
         astuntosLaikas = min - 55;
         arPrasidejoAstunta = ' (Vyksta)';
-    }
-    if ((h === 15) && (min >= 0 && min <= 34)){
+    } else if ((h === 15) && (min >= 0 && min <= 34)){
         astuntosLaikas = min + 5;
         arPrasidejoAstunta = ' (Vyksta)';
-    }
-    if (((h >= 15 && min >= 35) && (h <= 23)) || (h >= 16 && h <= 23)) {
+    } else if (((h >= 15 && min >= 35) && (h <= 23)) || (h >= 16 && h <= 23)) {
         astuntosLaikas = 45;
         arPrasidejoAstunta = ' (Jau baigėsi)';
     } 
