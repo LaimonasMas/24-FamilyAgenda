@@ -3,16 +3,16 @@ const lukoTvarkarastis = {
         '1. Lietuvių k.',
         '2. Tikyba',
         '3. Matematika',
-        '4. Anglų',
+        '4. Anglų k.',
         '5. Fizinis',
-        '6. Lietuvių',
+        '6. Lietuvių k.',
         '7. IMV'
     ],
     antradienis: [
         '1. Lietuvių k.',
         '2. Muzika',
         '3. Pasaulio pažinimas',
-        '4. Lietuvių',
+        '4. Lietuvių k.',
         '5. Matematika',
         '6. IMV'
     ],
