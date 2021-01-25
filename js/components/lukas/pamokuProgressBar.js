@@ -10,7 +10,7 @@ function pirma(h, min) {
     arPrasidejoPirma = ' (Dar neprasidėjo)';
     if(weekday === 0 || weekday === 6) {
         arPrasidejoPirma = ' (Laukiam pirmadienio)';
-    } else if ((h === 15) && (min >= 0 && min <= 59)){
+    } else if ((h === 8) && (min >= 0 && min <= 59)){
         pirmosLaikas = min;
         // pirmosLaikasDOM.style.width = min+"%";
         arPrasidejoPirma = ' (Vyksta)';
