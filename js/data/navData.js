@@ -11,19 +11,19 @@ const navData = {
         },
         {
             text: 'Rūta',
-            link: '#services'
-        },
-        {
-            text: 'Lukas',
             link: '#portfolio'
         },
         {
+            text: 'Lukas',
+            link: '#lukas'
+        },
+        {
             text: 'Benas',
-            link: '#renderTestimonials'
+            link: '#benas'
         },
         {
             text: 'Tauras',
-            link: '#blog'
+            link: '#services'
         },
     ]
 }

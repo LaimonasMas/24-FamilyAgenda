@@ -17,6 +17,8 @@ import { renderLaimonas } from "./components/laimonas/renderLaimonas.js";
 /* skills */
 import { skillsData } from "./data/skillsData.js";
 import { renderMySkills } from "./components/mySkills/renderMySkills.js";
+import { renderSavaitesDienos } from "./components/mySkills/renderSavaitesDienos.js";
+import { savaitesDienos } from "./data/lukoPamokos.js";
 /* resume */
 import { resumeData } from './data/resumeData.js';
 import { renderResume } from './components/resume/renderResume.js';
@@ -57,12 +59,13 @@ typeEffect.typeWriting();
 /* skills */
 renderMySkills('#skillsLeft', skillsData);
 renderMySkills('#skillsRight', skillsData);
+renderSavaitesDienos('#savaitesDiena', savaitesDienos);
 /* resume */
-renderResume('#resumeLeft', resumeData);
-renderResume('#resumeRight', resumeData);
+// renderResume('#resumeLeft', resumeData);
+// renderResume('#resumeRight', resumeData);
 /* client counter */
-renderClientCounter('#clientCounterBlock', clientCounterData);
-counterAnimationOnScroll();
+// renderClientCounter('#clientCounterBlock', clientCounterData);
+// counterAnimationOnScroll();
 /* services */
 // renderMyServices('#services-block', servicesData);
 renderLaimonas('#services-block1', laimonoData);

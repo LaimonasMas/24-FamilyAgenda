@@ -42,4 +42,8 @@ const lukoTvarkarastis = {
     ]
 };
 
-export { lukoTvarkarastis };
+const savaitesDienos = [
+    'Pirmadienio pamokos', 'Antradienio pamokos', 'Trečiadienio pamokos', 'Ketvirtadienio pamokos', 'Penktadienio pamokos'
+];
+
+export { lukoTvarkarastis, savaitesDienos };

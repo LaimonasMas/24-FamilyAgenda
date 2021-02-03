@@ -48,6 +48,11 @@
                 margin-top: 5px;
                 animation: value 0.0s forwards;
             }
+            h5.savDiena {
+                font-size: 24px;
+                color: var(--h4-color);
+                font-family: 'Montserrat', sans-serif;
+            }
 
 @keyframes loading {
     0% {
