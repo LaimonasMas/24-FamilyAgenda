@@ -70,7 +70,7 @@ renderSavaitesDienos('#savaitesDiena', savaitesDienos);
 // renderMyServices('#services-block', servicesData);
 renderLaimonas('#services-block1', laimonoData);
 /* portfolio */
-new Portfolio('.portfolio', portfolioData);
+// new Portfolio('.portfolio', portfolioData);
 /* testimonials */
 new Testimonials ({
     selector: '#renderTestimonials',
