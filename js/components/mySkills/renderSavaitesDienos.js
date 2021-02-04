@@ -11,11 +11,16 @@ function renderSavaitesDienos(selector, day) {
     }
 
     let HTML = '';
-for (let i=0; i<day.length; i++) {
-    if (weekday === i+1) {
-        HTML = `${day[i]}`;
+    if (weekday === 0 || weekday === 6) {
+        HTML = `${day[0]}`;
+    } else {
+    for (let i = 0; i < day.length; i++) {
+        if (weekday === (i + 1)) {
+            HTML = `${day[i]}`;
+        }
+            
+        }
     }
-}
 
 
     DOM.innerHTML = HTML;
