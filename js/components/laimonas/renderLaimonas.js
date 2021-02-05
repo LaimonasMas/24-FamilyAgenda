@@ -66,13 +66,13 @@ dayOfWeek();
 const day = dayOfWeek();
 function monthOfYear() {
     if(month === 0) {
-        return "Java";
+        return "Java modulis";
     } 
     if(month === 1 && dayOfMonth <= 4) {
-        return "Java";
+        return "Java modulis";
     }
     if((month === 1 && dayOfMonth >= 8) || (month === 2) || (month === 3) || (month === 4)) {
-        return "PHP";
+        return "PHP modulis";
     } else {
         return "mokomės savarankiškai :)"
     }

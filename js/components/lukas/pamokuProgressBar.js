@@ -3,6 +3,7 @@ import { weekday } from "./renderPamokosIntoData.js";
 let timeGeneral = new Date();
 let hours = timeGeneral.getHours();
 let minutes = timeGeneral.getMinutes();
+let sec = timeGeneral.getSeconds();
 
 let arPrasidejoPirma = '';
 function pirma(h, min) {
@@ -54,7 +55,7 @@ function trecia(h, min) {
         treciosLaikas = min - 55;
         arPrasidejoTrecia = ' (Vyksta)';
     } else if ((h === 10) && (min >= 0 && min <= 39)){
-        treciosLaikas = min + 5;
+        treciosLaikas = min + 5;       
         arPrasidejoTrecia = ' (Vyksta)';
     } else if (((h >= 10 && min >= 40) && (h <= 23)) || (h >= 11 && h <= 23)) {
         treciosLaikas = 45;

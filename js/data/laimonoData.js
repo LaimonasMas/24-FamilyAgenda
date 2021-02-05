@@ -4,7 +4,7 @@ const laimonoData = {
     data: [
         {    
             icon: 'zmdi zmdi-devices',
-            title: `Paskaitos: ${month1} modulis`,
+            title: `Paskaitos: ${month1}`,
             text:`${day}`
         },
         {

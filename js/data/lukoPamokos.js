@@ -36,9 +36,9 @@ const lukoTvarkarastis = {
     penktadienis: [
         '1. Klasės valandėlė',
         '2. Šokis',
-        '3. Dailė',
+        '3. Matematika',
         '4. Dailė',
-        '5. Matematika'
+        '5. Dailė'
     ]
 };
 
