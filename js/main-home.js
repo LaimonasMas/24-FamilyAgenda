@@ -19,16 +19,13 @@ import { skillsData } from "./data/skillsData.js";
 import { renderMySkills } from "./components/mySkills/renderMySkills.js";
 import { renderSavaitesDienos } from "./components/mySkills/renderSavaitesDienos.js";
 import { savaitesDienos } from "./data/lukoPamokos.js";
-/* resume */
-import { resumeData } from './data/resumeData.js';
-import { renderResume } from './components/resume/renderResume.js';
+
 
 /* services */
 // import { servicesData } from "./data/servicesData.js";
 import { renderMyServices } from "./components/myServices/renderMyServices.js";
 /* portfolio */
-import { portfolioData } from "./data/portfolioData.js";
-import { Portfolio } from "./components/portfolio/Portfolio.js";
+
 
 
 /***************
@@ -56,8 +53,7 @@ renderSavaitesDienos('#savaitesDiena', savaitesDienos);
 /* services */
 // renderMyServices('#services-block', servicesData);
 renderLaimonas('#services-block1', laimonoData);
-/* portfolio */
-// new Portfolio('.portfolio', portfolioData);
+
 
 /* footer */
 document.getElementById("year").innerHTML = new Date().getFullYear();
